@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{784D97DC-EFEE-4D13-BBA9-22FD7E4B5324}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelpDeskDLL</RootNamespace>
+    <AssemblyName>HelpDeskDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskProblemTypeByProblemTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketAssignmentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketAssignmentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketbyTicketMatchDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketbyTicketMatchDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketCurrentAssignmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketCurrentAssignmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketDocumentationByTicketIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketDocumentationByTicketIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketsByTicketIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketUpdatesByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindHelpDeskTicketUpdatesByTicketIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedHelpDeskProblemTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedHelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskClass.cs" />
+    <Compile Include="HelpDeskProblemTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskTicketAssignmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskTicketAssignmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskTicketDocumentationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskTicketDocumentationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskTicketsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskTicketsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskTicketUpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskTicketUpdateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertHelpDeskProblemTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertHelpDeskProblemTypeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertHelpDeskTicketAssignment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertHelpDeskTicketAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertHelpDeskTicketDocumentationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertHelpDeskTicketDocumentationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertHelpDeskTicketEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertHelpDeskTicketEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertHelpDeskTicketUpdateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertHelpDeskTicketUpdateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHelpDeskTicketCurrentAssignmentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateHelpDeskTicketCurrentAssignmentEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHelpDeskTicketStatusEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateHelpDeskTicketStatusEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsc">
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskProblemTypeByProblemTyepIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.xss">
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskProblemTypeByProblemTypeDataSet.xsc">
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskProblemTypeByProblemTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskProblemTypeByProblemTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskProblemTypeByProblemTypeDataSet.xss">
+      <DependentUpon>FindHelpDeskProblemTypeByProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketAssignmentsDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketAssignmentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketAssignmentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketAssignmentsDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketAssignmentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketbyTicketMatchDateDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketbyTicketMatchDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketbyTicketMatchDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketbyTicketMatchDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketbyTicketMatchDateDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketbyTicketMatchDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketCurrentAssignmentDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketCurrentAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketCurrentAssignmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketCurrentAssignmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketCurrentAssignmentDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketCurrentAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketDocumentationByTicketIDDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketDocumentationByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketDocumentationByTicketIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketDocumentationByTicketIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketDocumentationByTicketIDDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketDocumentationByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByDateRangeDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsByDateRangeDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByTicketIDDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByTicketIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsByTicketIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsByTicketIDDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketUpdatesByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketUpdatesByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketUpdatesByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByTicketIDDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketUpdatesByTicketIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketUpdatesByTicketIDDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedHelpDeskProblemTypeDataSet.xsc">
+      <DependentUpon>FindSortedHelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedHelpDeskProblemTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedHelpDeskProblemTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedHelpDeskProblemTypeDataSet.xss">
+      <DependentUpon>FindSortedHelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskProblemTypeDataSet.xsc">
+      <DependentUpon>HelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskProblemTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskProblemTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskProblemTypeDataSet.xss">
+      <DependentUpon>HelpDeskProblemTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketAssignmentDataSet.xsc">
+      <DependentUpon>HelpDeskTicketAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketAssignmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskTicketAssignmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskTicketAssignmentDataSet.xss">
+      <DependentUpon>HelpDeskTicketAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketDocumentationDataSet.xsc">
+      <DependentUpon>HelpDeskTicketDocumentationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketDocumentationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskTicketDocumentationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskTicketDocumentationDataSet.xss">
+      <DependentUpon>HelpDeskTicketDocumentationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketsDataSet.xsc">
+      <DependentUpon>HelpDeskTicketsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskTicketsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskTicketsDataSet.xss">
+      <DependentUpon>HelpDeskTicketsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketUpdateDataSet.xsc">
+      <DependentUpon>HelpDeskTicketUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskTicketUpdateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskTicketUpdateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskTicketUpdateDataSet.xss">
+      <DependentUpon>HelpDeskTicketUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskProblemTypeEntry.xsc">
+      <DependentUpon>InsertHelpDeskProblemTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskProblemTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertHelpDeskProblemTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertHelpDeskProblemTypeEntry.xss">
+      <DependentUpon>InsertHelpDeskProblemTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketAssignment.xsc">
+      <DependentUpon>InsertHelpDeskTicketAssignment.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketAssignment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertHelpDeskTicketAssignment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertHelpDeskTicketAssignment.xss">
+      <DependentUpon>InsertHelpDeskTicketAssignment.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketDocumentationEntry.xsc">
+      <DependentUpon>InsertHelpDeskTicketDocumentationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketDocumentationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertHelpDeskTicketDocumentationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertHelpDeskTicketDocumentationEntry.xss">
+      <DependentUpon>InsertHelpDeskTicketDocumentationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketEntry.xsc">
+      <DependentUpon>InsertHelpDeskTicketEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertHelpDeskTicketEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertHelpDeskTicketEntry.xss">
+      <DependentUpon>InsertHelpDeskTicketEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketUpdateEntry.xsc">
+      <DependentUpon>InsertHelpDeskTicketUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertHelpDeskTicketUpdateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertHelpDeskTicketUpdateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertHelpDeskTicketUpdateEntry.xss">
+      <DependentUpon>InsertHelpDeskTicketUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateHelpDeskTicketCurrentAssignmentEntry.xsc">
+      <DependentUpon>UpdateHelpDeskTicketCurrentAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateHelpDeskTicketCurrentAssignmentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateHelpDeskTicketCurrentAssignmentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateHelpDeskTicketCurrentAssignmentEntry.xss">
+      <DependentUpon>UpdateHelpDeskTicketCurrentAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateHelpDeskTicketStatusEntry.xsc">
+      <DependentUpon>UpdateHelpDeskTicketStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateHelpDeskTicketStatusEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateHelpDeskTicketStatusEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateHelpDeskTicketStatusEntry.xss">
+      <DependentUpon>UpdateHelpDeskTicketStatusEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
