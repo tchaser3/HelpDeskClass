@@ -279,9 +279,9 @@ namespace HelpDeskDLL {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FindOpenHelpDeskTicketsDataTable : global::System.Data.TypedTableBase<FindOpenHelpDeskTicketsRow> {
             
-            private global::System.Data.DataColumn columnTicketDate;
+            private global::System.Data.DataColumn columnTicketID;
             
-            private global::System.Data.DataColumn columnTicketDate1;
+            private global::System.Data.DataColumn columnTicketDate;
             
             private global::System.Data.DataColumn columnFirstName;
             
@@ -326,17 +326,17 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TicketDateColumn {
+            public global::System.Data.DataColumn TicketIDColumn {
                 get {
-                    return this.columnTicketDate;
+                    return this.columnTicketID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TicketDate1Column {
+            public global::System.Data.DataColumn TicketDateColumn {
                 get {
-                    return this.columnTicketDate1;
+                    return this.columnTicketDate;
                 }
             }
             
@@ -409,11 +409,11 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindOpenHelpDeskTicketsRow AddFindOpenHelpDeskTicketsRow(System.DateTime TicketDate, System.DateTime TicketDate1, string FirstName, string LastName, string ProblemType, string ReportedProblem) {
+            public FindOpenHelpDeskTicketsRow AddFindOpenHelpDeskTicketsRow(System.DateTime TicketDate, string FirstName, string LastName, string ProblemType, string ReportedProblem) {
                 FindOpenHelpDeskTicketsRow rowFindOpenHelpDeskTicketsRow = ((FindOpenHelpDeskTicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         TicketDate,
-                        TicketDate1,
                         FirstName,
                         LastName,
                         ProblemType,
@@ -421,6 +421,13 @@ namespace HelpDeskDLL {
                 rowFindOpenHelpDeskTicketsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindOpenHelpDeskTicketsRow);
                 return rowFindOpenHelpDeskTicketsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FindOpenHelpDeskTicketsRow FindByTicketID(int TicketID) {
+                return ((FindOpenHelpDeskTicketsRow)(this.Rows.Find(new object[] {
+                            TicketID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,8 +447,8 @@ namespace HelpDeskDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnTicketID = base.Columns["TicketID"];
                 this.columnTicketDate = base.Columns["TicketDate"];
-                this.columnTicketDate1 = base.Columns["TicketDate1"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnProblemType = base.Columns["ProblemType"];
@@ -451,10 +458,10 @@ namespace HelpDeskDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnTicketID = new global::System.Data.DataColumn("TicketID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTicketID);
                 this.columnTicketDate = new global::System.Data.DataColumn("TicketDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTicketDate);
-                this.columnTicketDate1 = new global::System.Data.DataColumn("TicketDate1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTicketDate1);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -463,8 +470,13 @@ namespace HelpDeskDLL {
                 base.Columns.Add(this.columnProblemType);
                 this.columnReportedProblem = new global::System.Data.DataColumn("ReportedProblem", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReportedProblem);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTicketID}, true));
+                this.columnTicketID.AutoIncrement = true;
+                this.columnTicketID.AllowDBNull = false;
+                this.columnTicketID.ReadOnly = true;
+                this.columnTicketID.Unique = true;
                 this.columnTicketDate.AllowDBNull = false;
-                this.columnTicketDate1.AllowDBNull = false;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
@@ -615,23 +627,23 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int TicketID {
+                get {
+                    return ((int)(this[this.tableFindOpenHelpDeskTickets.TicketIDColumn]));
+                }
+                set {
+                    this[this.tableFindOpenHelpDeskTickets.TicketIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime TicketDate {
                 get {
                     return ((global::System.DateTime)(this[this.tableFindOpenHelpDeskTickets.TicketDateColumn]));
                 }
                 set {
                     this[this.tableFindOpenHelpDeskTickets.TicketDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime TicketDate1 {
-                get {
-                    return ((global::System.DateTime)(this[this.tableFindOpenHelpDeskTickets.TicketDate1Column]));
-                }
-                set {
-                    this[this.tableFindOpenHelpDeskTickets.TicketDate1Column] = value;
                 }
             }
             
@@ -839,8 +851,8 @@ namespace HelpDeskDLL.FindOpenHelpDeskTicketsDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FindOpenHelpDeskTickets";
+            tableMapping.ColumnMappings.Add("TicketID", "TicketID");
             tableMapping.ColumnMappings.Add("TicketDate", "TicketDate");
-            tableMapping.ColumnMappings.Add("TicketDate1", "TicketDate1");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("ProblemType", "ProblemType");

@@ -21,8 +21,8 @@
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="TicketID" DataSetColumn="TicketID" />
               <Mapping SourceColumn="TicketDate" DataSetColumn="TicketDate" />
-              <Mapping SourceColumn="TicketDate1" DataSetColumn="TicketDate1" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="ProblemType" DataSetColumn="ProblemType" />
@@ -41,8 +41,8 @@
         <xs:element name="FindOpenHelpDeskTickets" msprop:Generator_TableClassName="FindOpenHelpDeskTicketsDataTable" msprop:Generator_TableVarName="tableFindOpenHelpDeskTickets" msprop:Generator_TablePropName="FindOpenHelpDeskTickets" msprop:Generator_RowDeletingName="FindOpenHelpDeskTicketsRowDeleting" msprop:Generator_RowChangingName="FindOpenHelpDeskTicketsRowChanging" msprop:Generator_RowEvHandlerName="FindOpenHelpDeskTicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="FindOpenHelpDeskTicketsRowDeleted" msprop:Generator_UserTableName="FindOpenHelpDeskTickets" msprop:Generator_RowChangedName="FindOpenHelpDeskTicketsRowChanged" msprop:Generator_RowEvArgName="FindOpenHelpDeskTicketsRowChangeEvent" msprop:Generator_RowClassName="FindOpenHelpDeskTicketsRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="TicketID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTicketID" msprop:Generator_ColumnPropNameInRow="TicketID" msprop:Generator_ColumnPropNameInTable="TicketIDColumn" msprop:Generator_UserColumnName="TicketID" type="xs:int" />
               <xs:element name="TicketDate" msprop:Generator_ColumnVarNameInTable="columnTicketDate" msprop:Generator_ColumnPropNameInRow="TicketDate" msprop:Generator_ColumnPropNameInTable="TicketDateColumn" msprop:Generator_UserColumnName="TicketDate" type="xs:dateTime" />
-              <xs:element name="TicketDate1" msprop:Generator_ColumnVarNameInTable="columnTicketDate1" msprop:Generator_ColumnPropNameInRow="TicketDate1" msprop:Generator_ColumnPropNameInTable="TicketDate1Column" msprop:Generator_UserColumnName="TicketDate1" type="xs:dateTime" />
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -76,5 +76,9 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FindOpenHelpDeskTickets" />
+      <xs:field xpath="mstns:TicketID" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
