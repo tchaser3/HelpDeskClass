@@ -85,6 +85,24 @@ namespace HelpDeskDLL
         FindHelpDeskTicketUpdatesByDateRangeDataSet aFindHelpDeskTicketUpdatesByDateRangeDataSet;
         FindHelpDeskTicketUpdatesByDateRangeDataSetTableAdapters.FindHelpTicketUpdatesByDateRangeTableAdapter aFindHelpDeskTicketUpdatesByDateRangeTableAdapter;
 
+        FindOpenHelpDeskTicketsDataSet aFindOpenHelpDeskTicketsDataSet;
+        FindOpenHelpDeskTicketsDataSetTableAdapters.FindOpenHelpDeskTicketsTableAdapter aFindOpenHelpDeskTicketsTableAdapter;
+
+        public FindOpenHelpDeskTicketsDataSet FindOpenHelpDeskTickets()
+        {
+            try
+            {
+                aFindOpenHelpDeskTicketsDataSet = new FindOpenHelpDeskTicketsDataSet();
+                aFindOpenHelpDeskTicketsTableAdapter = new FindOpenHelpDeskTicketsDataSetTableAdapters.FindOpenHelpDeskTicketsTableAdapter();
+                aFindOpenHelpDeskTicketsTableAdapter.Fill(aFindOpenHelpDeskTicketsDataSet.FindOpenHelpDeskTickets);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets " + Ex.Message);
+            }
+
+            return aFindOpenHelpDeskTicketsDataSet;
+        }
         public FindHelpDeskTicketUpdatesByDateRangeDataSet FindHelpDeskTicketUpdates(DateTime datStartDate, DateTime datEndDate)
         {
             try
