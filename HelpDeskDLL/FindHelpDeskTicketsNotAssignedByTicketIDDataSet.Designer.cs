@@ -301,6 +301,8 @@ namespace HelpDeskDLL {
             
             private global::System.Data.DataColumn columnLastName;
             
+            private global::System.Data.DataColumn columnTicketStatus;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindHelpDeskTicketsNotAssignedByTicketIDDataTable() {
@@ -424,6 +426,14 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TicketStatusColumn {
+                get {
+                    return this.columnTicketStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +469,7 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketsNotAssignedByTicketIDRow AddFindHelpDeskTicketsNotAssignedByTicketIDRow(System.DateTime TicketDate, string ComputerName, string UserName, int WarehouseID, int ProblemTypeID, string ProblemType, string ReportedProblem, int EmployeeID, string FirstName, string LastName) {
+            public FindHelpDeskTicketsNotAssignedByTicketIDRow AddFindHelpDeskTicketsNotAssignedByTicketIDRow(System.DateTime TicketDate, string ComputerName, string UserName, int WarehouseID, int ProblemTypeID, string ProblemType, string ReportedProblem, int EmployeeID, string FirstName, string LastName, string TicketStatus) {
                 FindHelpDeskTicketsNotAssignedByTicketIDRow rowFindHelpDeskTicketsNotAssignedByTicketIDRow = ((FindHelpDeskTicketsNotAssignedByTicketIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -472,7 +482,8 @@ namespace HelpDeskDLL {
                         ReportedProblem,
                         EmployeeID,
                         FirstName,
-                        LastName};
+                        LastName,
+                        TicketStatus};
                 rowFindHelpDeskTicketsNotAssignedByTicketIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindHelpDeskTicketsNotAssignedByTicketIDRow);
                 return rowFindHelpDeskTicketsNotAssignedByTicketIDRow;
@@ -513,6 +524,7 @@ namespace HelpDeskDLL {
                 this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
+                this.columnTicketStatus = base.Columns["TicketStatus"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +552,8 @@ namespace HelpDeskDLL {
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
+                this.columnTicketStatus = new global::System.Data.DataColumn("TicketStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTicketStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTicketID}, true));
                 this.columnTicketID.AutoIncrement = true;
@@ -562,6 +576,8 @@ namespace HelpDeskDLL {
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
+                this.columnTicketStatus.AllowDBNull = false;
+                this.columnTicketStatus.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -822,6 +838,17 @@ namespace HelpDeskDLL {
                     this[this.tableFindHelpDeskTicketsNotAssignedByTicketID.LastNameColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TicketStatus {
+                get {
+                    return ((string)(this[this.tableFindHelpDeskTicketsNotAssignedByTicketID.TicketStatusColumn]));
+                }
+                set {
+                    this[this.tableFindHelpDeskTicketsNotAssignedByTicketID.TicketStatusColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -994,6 +1021,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketsNotAssignedByTicketIDDataSetTableAdapte
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("TicketStatus", "TicketStatus");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

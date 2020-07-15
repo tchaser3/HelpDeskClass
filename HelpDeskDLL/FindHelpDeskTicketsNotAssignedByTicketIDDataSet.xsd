@@ -33,6 +33,7 @@
               <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="TicketStatus" DataSetColumn="TicketStatus" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -88,6 +89,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TicketStatus" msprop:Generator_ColumnVarNameInTable="columnTicketStatus" msprop:Generator_ColumnPropNameInRow="TicketStatus" msprop:Generator_ColumnPropNameInTable="TicketStatusColumn" msprop:Generator_UserColumnName="TicketStatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
