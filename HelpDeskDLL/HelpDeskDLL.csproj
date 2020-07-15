@@ -171,6 +171,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateHelpDeskTicketCurrentAssignmentEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateHelpDeskTicketProblemTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateHelpDeskTicketProblemTypeEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateHelpDeskTicketStatusEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -446,6 +451,17 @@
     </None>
     <None Include="UpdateHelpDeskTicketCurrentAssignmentEntry.xss">
       <DependentUpon>UpdateHelpDeskTicketCurrentAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateHelpDeskTicketProblemTypeEntry.xsc">
+      <DependentUpon>UpdateHelpDeskTicketProblemTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateHelpDeskTicketProblemTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateHelpDeskTicketProblemTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateHelpDeskTicketProblemTypeEntry.xss">
+      <DependentUpon>UpdateHelpDeskTicketProblemTypeEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateHelpDeskTicketStatusEntry.xsc">
       <DependentUpon>UpdateHelpDeskTicketStatusEntry.xsd</DependentUpon>

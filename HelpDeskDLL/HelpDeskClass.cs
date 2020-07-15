@@ -91,6 +91,26 @@ namespace HelpDeskDLL
         FindHelpDeskTicketsNotAssignedByTicketIDDataSet aFindHelpDeskTicketsNotAssignedByTicketIDDataSet;
         FindHelpDeskTicketsNotAssignedByTicketIDDataSetTableAdapters.FindHelpDeskTicketsNotAssignedByTicketIDTableAdapter aFindHelpDeskTicketsNotAssignedByTicketIDTableAdapter;
 
+        UpdateHelpDeskTicketProblemTypeEntryTableAdapters.QueriesTableAdapter aUpdateHelpDeskTicketProblemTypeTableAdapter;
+
+        public bool UpdateHelpDeskTicketProblemType(int intTicketID, int intProblemTypeID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateHelpDeskTicketProblemTypeTableAdapter = new UpdateHelpDeskTicketProblemTypeEntryTableAdapters.QueriesTableAdapter();
+                aUpdateHelpDeskTicketProblemTypeTableAdapter.UpdateHelpDeskTicketProblemType(intTicketID, intProblemTypeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Problem Type " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public FindHelpDeskTicketsNotAssignedByTicketIDDataSet FindHelpDeskTicketsNotAssignedByTicketID(int intTicketID)
         {
             try
