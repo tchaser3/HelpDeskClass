@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -261,6 +266,17 @@
     </None>
     <None Include="FindHelpDeskTicketsByTicketIDDataSet.xss">
       <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindHelpDeskTicketUpdatesByDateRangeDataSet.xsc">
       <DependentUpon>FindHelpDeskTicketUpdatesByDateRangeDataSet.xsd</DependentUpon>

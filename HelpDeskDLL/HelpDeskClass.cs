@@ -88,6 +88,24 @@ namespace HelpDeskDLL
         FindOpenHelpDeskTicketsDataSet aFindOpenHelpDeskTicketsDataSet;
         FindOpenHelpDeskTicketsDataSetTableAdapters.FindOpenHelpDeskTicketsTableAdapter aFindOpenHelpDeskTicketsTableAdapter;
 
+        FindHelpDeskTicketsNotAssignedByTicketIDDataSet aFindHelpDeskTicketsNotAssignedByTicketIDDataSet;
+        FindHelpDeskTicketsNotAssignedByTicketIDDataSetTableAdapters.FindHelpDeskTicketsNotAssignedByTicketIDTableAdapter aFindHelpDeskTicketsNotAssignedByTicketIDTableAdapter;
+
+        public FindHelpDeskTicketsNotAssignedByTicketIDDataSet FindHelpDeskTicketsNotAssignedByTicketID(int intTicketID)
+        {
+            try
+            {
+                aFindHelpDeskTicketsNotAssignedByTicketIDDataSet = new FindHelpDeskTicketsNotAssignedByTicketIDDataSet();
+                aFindHelpDeskTicketsNotAssignedByTicketIDTableAdapter = new FindHelpDeskTicketsNotAssignedByTicketIDDataSetTableAdapters.FindHelpDeskTicketsNotAssignedByTicketIDTableAdapter();
+                aFindHelpDeskTicketsNotAssignedByTicketIDTableAdapter.Fill(aFindHelpDeskTicketsNotAssignedByTicketIDDataSet.FindHelpDeskTicketsNotAssignedByTicketID, intTicketID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets Not Assigned By Ticket ID " + Ex.Message);
+            }
+
+            return aFindHelpDeskTicketsNotAssignedByTicketIDDataSet;
+        }
         public FindOpenHelpDeskTicketsDataSet FindOpenHelpDeskTickets()
         {
             try
