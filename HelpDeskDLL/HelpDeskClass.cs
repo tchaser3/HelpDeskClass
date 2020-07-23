@@ -93,6 +93,42 @@ namespace HelpDeskDLL
 
         UpdateHelpDeskTicketProblemTypeEntryTableAdapters.QueriesTableAdapter aUpdateHelpDeskTicketProblemTypeTableAdapter;
 
+        FindOpenHelpDeskTicketsAssignedDataSet aFindOpenHelpDeskTicketsAssignedDataSet;
+        FindOpenHelpDeskTicketsAssignedDataSetTableAdapters.FindOpenHelpDeskTicketsAssginedTableAdapter aFindOpenHelpDeskTicketsAssignedTableAdapter;
+
+        FindAssignedHelpDeskTicketsForEmployeeDataSet aFindAssignedHelpDeskTicketsForEmployeeDataSet;
+        FindAssignedHelpDeskTicketsForEmployeeDataSetTableAdapters.FindAssignedHelpDeskTicketsForEmployeeTableAdapter aFindAssignedHelpDeskTicketsForEmployeeTableAdapter;
+
+        public FindAssignedHelpDeskTicketsForEmployeeDataSet FindAssignedHelpDeskTicketsForEmployee(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindAssignedHelpDeskTicketsForEmployeeDataSet = new FindAssignedHelpDeskTicketsForEmployeeDataSet();
+                aFindAssignedHelpDeskTicketsForEmployeeTableAdapter = new FindAssignedHelpDeskTicketsForEmployeeDataSetTableAdapters.FindAssignedHelpDeskTicketsForEmployeeTableAdapter();
+                aFindAssignedHelpDeskTicketsForEmployeeTableAdapter.Fill(aFindAssignedHelpDeskTicketsForEmployeeDataSet.FindAssignedHelpDeskTicketsForEmployee, intEmployeeID, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Assigned Help Desk Tickets For Employee " + Ex.Message);
+            }
+
+            return aFindAssignedHelpDeskTicketsForEmployeeDataSet;
+        }
+        public FindOpenHelpDeskTicketsAssignedDataSet FindOpenHelpDeskTicketsAssigned(int intEmployeeID)
+        {
+            try
+            {
+                aFindOpenHelpDeskTicketsAssignedDataSet = new FindOpenHelpDeskTicketsAssignedDataSet();
+                aFindOpenHelpDeskTicketsAssignedTableAdapter = new FindOpenHelpDeskTicketsAssignedDataSetTableAdapters.FindOpenHelpDeskTicketsAssginedTableAdapter();
+                aFindOpenHelpDeskTicketsAssignedTableAdapter.Fill(aFindOpenHelpDeskTicketsAssignedDataSet.FindOpenHelpDeskTicketsAssgined, intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets Assigned " + Ex.Message);
+            }
+
+            return aFindOpenHelpDeskTicketsAssignedDataSet;
+        }
         public bool UpdateHelpDeskTicketProblemType(int intTicketID, int intProblemTypeID)
         {
             bool blnFatalError = false;

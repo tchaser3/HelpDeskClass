@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindAssignedHelpDeskTicketsForEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +103,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenHelpDeskTicketsAssignedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenHelpDeskTicketsAssignedDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindOpenHelpDeskTicketsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -184,6 +194,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindAssignedHelpDeskTicketsForEmployeeDataSet.xsc">
+      <DependentUpon>FindAssignedHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedHelpDeskTicketsForEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedHelpDeskTicketsForEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedHelpDeskTicketsForEmployeeDataSet.xss">
+      <DependentUpon>FindAssignedHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsc">
       <DependentUpon>FindHelpDeskProblemTypeByProblemTyepIDDataSet.xsd</DependentUpon>
     </None>
@@ -304,6 +325,17 @@
     </None>
     <None Include="FindHelpDeskTicketUpdatesByTicketIDDataSet.xss">
       <DependentUpon>FindHelpDeskTicketUpdatesByTicketIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsAssignedDataSet.xsc">
+      <DependentUpon>FindOpenHelpDeskTicketsAssignedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsAssignedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenHelpDeskTicketsAssignedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsAssignedDataSet.xss">
+      <DependentUpon>FindOpenHelpDeskTicketsAssignedDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindOpenHelpDeskTicketsDataSet.xsc">
       <DependentUpon>FindOpenHelpDeskTicketsDataSet.xsd</DependentUpon>

@@ -62,7 +62,7 @@
               <xs:element name="UpdateNotes" msprop:Generator_ColumnVarNameInTable="columnUpdateNotes" msprop:Generator_ColumnPropNameInRow="UpdateNotes" msprop:Generator_ColumnPropNameInTable="UpdateNotesColumn" msprop:Generator_UserColumnName="UpdateNotes">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
+                    <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -74,6 +74,7 @@
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:FindHelpDeskTicketUpdatesByTicketID" />
       <xs:field xpath="mstns:TransactionID" />
+      <xs:field xpath="mstns:EmployeeID" />
     </xs:unique>
   </xs:element>
 </xs:schema>
