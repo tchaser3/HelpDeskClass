@@ -289,7 +289,11 @@ namespace HelpDeskDLL {
             
             private global::System.Data.DataColumn columnWarehouseID;
             
-            private global::System.Data.DataColumn columnWarehouse;
+            private global::System.Data.DataColumn columnEmployeeID;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
             
             private global::System.Data.DataColumn columnProblemType;
             
@@ -372,9 +376,25 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WarehouseColumn {
+            public global::System.Data.DataColumn EmployeeIDColumn {
                 get {
-                    return this.columnWarehouse;
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
                 }
             }
             
@@ -439,7 +459,7 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindOpenHelpDeskTicketsAssginedRow AddFindOpenHelpDeskTicketsAssginedRow(System.DateTime TicketDate, string ComputerName, string IPAddress, int WarehouseID, string Warehouse, string ProblemType, string ReportedProblem, string TicketStatus) {
+            public FindOpenHelpDeskTicketsAssginedRow AddFindOpenHelpDeskTicketsAssginedRow(System.DateTime TicketDate, string ComputerName, string IPAddress, int WarehouseID, int EmployeeID, string FirstName, string LastName, string ProblemType, string ReportedProblem, string TicketStatus) {
                 FindOpenHelpDeskTicketsAssginedRow rowFindOpenHelpDeskTicketsAssginedRow = ((FindOpenHelpDeskTicketsAssginedRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -447,7 +467,9 @@ namespace HelpDeskDLL {
                         ComputerName,
                         IPAddress,
                         WarehouseID,
-                        Warehouse,
+                        EmployeeID,
+                        FirstName,
+                        LastName,
                         ProblemType,
                         ReportedProblem,
                         TicketStatus};
@@ -485,7 +507,9 @@ namespace HelpDeskDLL {
                 this.columnComputerName = base.Columns["ComputerName"];
                 this.columnIPAddress = base.Columns["IPAddress"];
                 this.columnWarehouseID = base.Columns["WarehouseID"];
-                this.columnWarehouse = base.Columns["Warehouse"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
                 this.columnProblemType = base.Columns["ProblemType"];
                 this.columnReportedProblem = base.Columns["ReportedProblem"];
                 this.columnTicketStatus = base.Columns["TicketStatus"];
@@ -504,8 +528,12 @@ namespace HelpDeskDLL {
                 base.Columns.Add(this.columnIPAddress);
                 this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarehouseID);
-                this.columnWarehouse = new global::System.Data.DataColumn("Warehouse", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWarehouse);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
                 this.columnProblemType = new global::System.Data.DataColumn("ProblemType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProblemType);
                 this.columnReportedProblem = new global::System.Data.DataColumn("ReportedProblem", typeof(string), null, global::System.Data.MappingType.Element);
@@ -524,8 +552,11 @@ namespace HelpDeskDLL {
                 this.columnIPAddress.AllowDBNull = false;
                 this.columnIPAddress.MaxLength = 2147483647;
                 this.columnWarehouseID.AllowDBNull = false;
-                this.columnWarehouse.AllowDBNull = false;
-                this.columnWarehouse.MaxLength = 2147483647;
+                this.columnEmployeeID.AllowDBNull = false;
+                this.columnFirstName.AllowDBNull = false;
+                this.columnFirstName.MaxLength = 2147483647;
+                this.columnLastName.AllowDBNull = false;
+                this.columnLastName.MaxLength = 2147483647;
                 this.columnProblemType.AllowDBNull = false;
                 this.columnProblemType.MaxLength = 2147483647;
                 this.columnReportedProblem.AllowDBNull = false;
@@ -729,12 +760,34 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Warehouse {
+            public int EmployeeID {
                 get {
-                    return ((string)(this[this.tableFindOpenHelpDeskTicketsAssgined.WarehouseColumn]));
+                    return ((int)(this[this.tableFindOpenHelpDeskTicketsAssgined.EmployeeIDColumn]));
                 }
                 set {
-                    this[this.tableFindOpenHelpDeskTicketsAssgined.WarehouseColumn] = value;
+                    this[this.tableFindOpenHelpDeskTicketsAssgined.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    return ((string)(this[this.tableFindOpenHelpDeskTicketsAssgined.FirstNameColumn]));
+                }
+                set {
+                    this[this.tableFindOpenHelpDeskTicketsAssgined.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    return ((string)(this[this.tableFindOpenHelpDeskTicketsAssgined.LastNameColumn]));
+                }
+                set {
+                    this[this.tableFindOpenHelpDeskTicketsAssgined.LastNameColumn] = value;
                 }
             }
             
@@ -936,7 +989,9 @@ namespace HelpDeskDLL.FindOpenHelpDeskTicketsAssignedDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ComputerName", "ComputerName");
             tableMapping.ColumnMappings.Add("IPAddress", "IPAddress");
             tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
-            tableMapping.ColumnMappings.Add("Warehouse", "Warehouse");
+            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("ProblemType", "ProblemType");
             tableMapping.ColumnMappings.Add("ReportedProblem", "ReportedProblem");
             tableMapping.ColumnMappings.Add("TicketStatus", "TicketStatus");
