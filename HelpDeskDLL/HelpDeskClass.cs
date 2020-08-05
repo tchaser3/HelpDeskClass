@@ -99,6 +99,42 @@ namespace HelpDeskDLL
         FindAssignedHelpDeskTicketsForEmployeeDataSet aFindAssignedHelpDeskTicketsForEmployeeDataSet;
         FindAssignedHelpDeskTicketsForEmployeeDataSetTableAdapters.FindAssignedHelpDeskTicketsForEmployeeTableAdapter aFindAssignedHelpDeskTicketsForEmployeeTableAdapter;
 
+        FindOpenHelpDeskTicketsForEmployeeDataSet aFindOpenHelpDeskTicketsForEmployeeDataSet;
+        FindOpenHelpDeskTicketsForEmployeeDataSetTableAdapters.FindOpenHelpDeskTicketsForEmployeeTableAdapter aFindOpenHelpDeskTicketsForEmployeeTableAdapter;
+
+        FindHelpDeskTicketsForEmployeeDataSet aFindHelpDeskTicketsForEmployeeDataSet;
+        FindHelpDeskTicketsForEmployeeDataSetTableAdapters.FindHelpDeskTicketsForEmployeeTableAdapter aFindHelpDeskTicketsForEmployeeTableAdapter;
+
+        public FindHelpDeskTicketsForEmployeeDataSet FindHelpDeskTicketsForEmployee(int intEmployee, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindHelpDeskTicketsForEmployeeDataSet = new FindHelpDeskTicketsForEmployeeDataSet();
+                aFindHelpDeskTicketsForEmployeeTableAdapter = new FindHelpDeskTicketsForEmployeeDataSetTableAdapters.FindHelpDeskTicketsForEmployeeTableAdapter();
+                aFindHelpDeskTicketsForEmployeeTableAdapter.Fill(aFindHelpDeskTicketsForEmployeeDataSet.FindHelpDeskTicketsForEmployee, intEmployee, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // find Help Desk Tickets For Employee " + Ex.Message);
+            }
+
+            return aFindHelpDeskTicketsForEmployeeDataSet;
+        }
+        public FindOpenHelpDeskTicketsForEmployeeDataSet FindOpenHelpDeskTicketsForEmployee(int intEmployeeID)
+        {
+            try
+            {
+                aFindOpenHelpDeskTicketsForEmployeeDataSet = new FindOpenHelpDeskTicketsForEmployeeDataSet();
+                aFindOpenHelpDeskTicketsForEmployeeTableAdapter = new FindOpenHelpDeskTicketsForEmployeeDataSetTableAdapters.FindOpenHelpDeskTicketsForEmployeeTableAdapter();
+                aFindOpenHelpDeskTicketsForEmployeeTableAdapter.Fill(aFindOpenHelpDeskTicketsForEmployeeDataSet.FindOpenHelpDeskTicketsForEmployee, intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Employee " + Ex.Message);
+            }
+
+            return aFindOpenHelpDeskTicketsForEmployeeDataSet;
+        }
         public FindAssignedHelpDeskTicketsForEmployeeDataSet FindAssignedHelpDeskTicketsForEmployee(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try

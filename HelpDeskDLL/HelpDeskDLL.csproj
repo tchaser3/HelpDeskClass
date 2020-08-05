@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindHelpDeskTicketsForEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +118,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOpenHelpDeskTicketsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenHelpDeskTicketsForEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindSortedHelpDeskProblemTypeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -293,6 +303,17 @@
     <None Include="FindHelpDeskTicketsByTicketIDDataSet.xss">
       <DependentUpon>FindHelpDeskTicketsByTicketIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindHelpDeskTicketsForEmployeeDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsForEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsForEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsForEmployeeDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsc">
       <DependentUpon>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd</DependentUpon>
     </None>
@@ -347,6 +368,17 @@
     </None>
     <None Include="FindOpenHelpDeskTicketsDataSet.xss">
       <DependentUpon>FindOpenHelpDeskTicketsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsForEmployeeDataSet.xsc">
+      <DependentUpon>FindOpenHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsForEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenHelpDeskTicketsForEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenHelpDeskTicketsForEmployeeDataSet.xss">
+      <DependentUpon>FindOpenHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindSortedHelpDeskProblemTypeDataSet.xsc">
       <DependentUpon>FindSortedHelpDeskProblemTypeDataSet.xsd</DependentUpon>
