@@ -105,6 +105,24 @@ namespace HelpDeskDLL
         FindHelpDeskTicketsForEmployeeDataSet aFindHelpDeskTicketsForEmployeeDataSet;
         FindHelpDeskTicketsForEmployeeDataSetTableAdapters.FindHelpDeskTicketsForEmployeeTableAdapter aFindHelpDeskTicketsForEmployeeTableAdapter;
 
+        FindHelpDeskTicketProblemsByDateRangeDataSet aFindHelpDeskTicketProblemsByDateRangeDataSet;
+        FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters.FindHelpDeskTicketProblemsByDateRangeTableAdapter aFindHelpDeskTicketProblemsByDateRangeTableAdapter;
+
+        public FindHelpDeskTicketProblemsByDateRangeDataSet FindHelpDeskTicketProblemsByDateRanage(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindHelpDeskTicketProblemsByDateRangeDataSet = new FindHelpDeskTicketProblemsByDateRangeDataSet();
+                aFindHelpDeskTicketProblemsByDateRangeTableAdapter = new FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters.FindHelpDeskTicketProblemsByDateRangeTableAdapter();
+                aFindHelpDeskTicketProblemsByDateRangeTableAdapter.Fill(aFindHelpDeskTicketProblemsByDateRangeDataSet.FindHelpDeskTicketProblemsByDateRange, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Problems By Date Range " + Ex.Message);
+            }
+
+            return aFindHelpDeskTicketProblemsByDateRangeDataSet;
+        }
         public FindHelpDeskTicketsForEmployeeDataSet FindHelpDeskTicketsForEmployee(int intEmployee, DateTime datStartDate, DateTime datEndDate)
         {
             try
