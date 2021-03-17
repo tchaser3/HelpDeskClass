@@ -108,6 +108,24 @@ namespace HelpDeskDLL
         FindHelpDeskTicketProblemsByDateRangeDataSet aFindHelpDeskTicketProblemsByDateRangeDataSet;
         FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters.FindHelpDeskTicketProblemsByDateRangeTableAdapter aFindHelpDeskTicketProblemsByDateRangeTableAdapter;
 
+        FindOpenHelpDeskTicketsForAssignmentDataSet aFindOpenHelpDeskTicketsForAssignmentDataSet;
+        FindOpenHelpDeskTicketsForAssignmentDataSetTableAdapters.FindOpenHelpDeskTicketsForAssignmentTableAdapter aFindOpenHelpDeskTicketsForAssignmentTableAdapter;
+
+        public FindOpenHelpDeskTicketsForAssignmentDataSet FindOpenHelpDeskTicketsForAssignment()
+        {
+            try
+            {
+                aFindOpenHelpDeskTicketsForAssignmentDataSet = new FindOpenHelpDeskTicketsForAssignmentDataSet();
+                aFindOpenHelpDeskTicketsForAssignmentTableAdapter = new FindOpenHelpDeskTicketsForAssignmentDataSetTableAdapters.FindOpenHelpDeskTicketsForAssignmentTableAdapter();
+                aFindOpenHelpDeskTicketsForAssignmentTableAdapter.Fill(aFindOpenHelpDeskTicketsForAssignmentDataSet.FindOpenHelpDeskTicketsForAssignment);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Assignment " + Ex.Message);
+            }
+
+            return aFindOpenHelpDeskTicketsForAssignmentDataSet;
+        }
         public FindHelpDeskTicketProblemsByDateRangeDataSet FindHelpDeskTicketProblemsByDateRanage(DateTime datStartDate, DateTime datEndDate)
         {
             try
