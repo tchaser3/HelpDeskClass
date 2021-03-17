@@ -33,7 +33,8 @@
               <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
-              <Mapping SourceColumn="EmployeeID1" DataSetColumn="EmployeeID1" />
+              <Mapping SourceColumn="TicketStatus" DataSetColumn="TicketStatus" />
+              <Mapping SourceColumn="AssignedEmployeeID" DataSetColumn="AssignedEmployeeID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -45,7 +46,7 @@
   <xs:element name="FindHelpDeskTicketsByTicketIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindHelpDeskTicketsByTicketIDDataSet" msprop:Generator_UserDSName="FindHelpDeskTicketsByTicketIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindHelpDeskTicketsByTicketID" msprop:Generator_TableClassName="FindHelpDeskTicketsByTicketIDDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByTicketID" msprop:Generator_TablePropName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByTicketIDRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByTicketIDRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByTicketIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByTicketIDRowDeleted" msprop:Generator_UserTableName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowChangedName="FindHelpDeskTicketsByTicketIDRowChanged" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByTicketIDRowChangeEvent" msprop:Generator_RowClassName="FindHelpDeskTicketsByTicketIDRow">
+        <xs:element name="FindHelpDeskTicketsByTicketID" msprop:Generator_TableClassName="FindHelpDeskTicketsByTicketIDDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByTicketID" msprop:Generator_RowChangedName="FindHelpDeskTicketsByTicketIDRowChanged" msprop:Generator_TablePropName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByTicketIDRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByTicketIDRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByTicketIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByTicketIDRowDeleted" msprop:Generator_RowClassName="FindHelpDeskTicketsByTicketIDRow" msprop:Generator_UserTableName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByTicketIDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TicketID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTicketID" msprop:Generator_ColumnPropNameInRow="TicketID" msprop:Generator_ColumnPropNameInTable="TicketIDColumn" msprop:Generator_UserColumnName="TicketID" type="xs:int" />
@@ -95,7 +96,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="EmployeeID1" msprop:Generator_ColumnVarNameInTable="columnEmployeeID1" msprop:Generator_ColumnPropNameInRow="EmployeeID1" msprop:Generator_ColumnPropNameInTable="EmployeeID1Column" msprop:Generator_UserColumnName="EmployeeID1" type="xs:int" />
+              <xs:element name="TicketStatus" msprop:Generator_ColumnVarNameInTable="columnTicketStatus" msprop:Generator_ColumnPropNameInRow="TicketStatus" msprop:Generator_ColumnPropNameInTable="TicketStatusColumn" msprop:Generator_UserColumnName="TicketStatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssignedEmployeeID" msprop:Generator_ColumnVarNameInTable="columnAssignedEmployeeID" msprop:Generator_ColumnPropNameInRow="AssignedEmployeeID" msprop:Generator_ColumnPropNameInTable="AssignedEmployeeIDColumn" msprop:Generator_UserColumnName="AssignedEmployeeID" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
