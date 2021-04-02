@@ -111,6 +111,24 @@ namespace HelpDeskDLL
         FindOpenHelpDeskTicketsForAssignmentDataSet aFindOpenHelpDeskTicketsForAssignmentDataSet;
         FindOpenHelpDeskTicketsForAssignmentDataSetTableAdapters.FindOpenHelpDeskTicketsForAssignmentTableAdapter aFindOpenHelpDeskTicketsForAssignmentTableAdapter;
 
+        FindHelpDeskTicketsByAssignmentDataSet aFindHelpDeskTicketsByAssignmentDataSet;
+        FindHelpDeskTicketsByAssignmentDataSetTableAdapters.FindHelpDeskTicketsByAssignmentTableAdapter aFindHelpDeskTicketsByAssignmentTableAdapter;
+
+        public FindHelpDeskTicketsByAssignmentDataSet FindHelpDeskTicketsbyAssignment(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindHelpDeskTicketsByAssignmentDataSet = new FindHelpDeskTicketsByAssignmentDataSet();
+                aFindHelpDeskTicketsByAssignmentTableAdapter = new FindHelpDeskTicketsByAssignmentDataSetTableAdapters.FindHelpDeskTicketsByAssignmentTableAdapter();
+                aFindHelpDeskTicketsByAssignmentTableAdapter.Fill(aFindHelpDeskTicketsByAssignmentDataSet.FindHelpDeskTicketsByAssignment, intEmployeeID, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Assignment " + Ex.Message);
+            }
+
+            return aFindHelpDeskTicketsByAssignmentDataSet;
+        }
         public FindOpenHelpDeskTicketsForAssignmentDataSet FindOpenHelpDeskTicketsForAssignment()
         {
             try

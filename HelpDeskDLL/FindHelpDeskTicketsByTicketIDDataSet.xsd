@@ -34,7 +34,6 @@
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="TicketStatus" DataSetColumn="TicketStatus" />
-              <Mapping SourceColumn="AssignedEmployeeID" DataSetColumn="AssignedEmployeeID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -46,7 +45,7 @@
   <xs:element name="FindHelpDeskTicketsByTicketIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindHelpDeskTicketsByTicketIDDataSet" msprop:Generator_UserDSName="FindHelpDeskTicketsByTicketIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindHelpDeskTicketsByTicketID" msprop:Generator_TableClassName="FindHelpDeskTicketsByTicketIDDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByTicketID" msprop:Generator_RowChangedName="FindHelpDeskTicketsByTicketIDRowChanged" msprop:Generator_TablePropName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByTicketIDRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByTicketIDRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByTicketIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByTicketIDRowDeleted" msprop:Generator_RowClassName="FindHelpDeskTicketsByTicketIDRow" msprop:Generator_UserTableName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByTicketIDRowChangeEvent">
+        <xs:element name="FindHelpDeskTicketsByTicketID" msprop:Generator_TableClassName="FindHelpDeskTicketsByTicketIDDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByTicketID" msprop:Generator_TablePropName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByTicketIDRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByTicketIDRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByTicketIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByTicketIDRowDeleted" msprop:Generator_UserTableName="FindHelpDeskTicketsByTicketID" msprop:Generator_RowChangedName="FindHelpDeskTicketsByTicketIDRowChanged" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByTicketIDRowChangeEvent" msprop:Generator_RowClassName="FindHelpDeskTicketsByTicketIDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TicketID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTicketID" msprop:Generator_ColumnPropNameInRow="TicketID" msprop:Generator_ColumnPropNameInTable="TicketIDColumn" msprop:Generator_UserColumnName="TicketID" type="xs:int" />
@@ -103,7 +102,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="AssignedEmployeeID" msprop:Generator_ColumnVarNameInTable="columnAssignedEmployeeID" msprop:Generator_ColumnPropNameInRow="AssignedEmployeeID" msprop:Generator_ColumnPropNameInTable="AssignedEmployeeIDColumn" msprop:Generator_UserColumnName="AssignedEmployeeID" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

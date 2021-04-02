@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindHelpDeskTicketProblemsByDateRangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindHelpDeskTicketsByAssignmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsByAssignmentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindHelpDeskTicketsByDateRangeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -301,6 +306,17 @@
     </None>
     <None Include="FindHelpDeskTicketProblemsByDateRangeDataSet.xss">
       <DependentUpon>FindHelpDeskTicketProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByAssignmentDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsByAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsByAssignmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsByAssignmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsByAssignmentDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsByAssignmentDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindHelpDeskTicketsByDateRangeDataSet.xsc">
       <DependentUpon>FindHelpDeskTicketsByDateRangeDataSet.xsd</DependentUpon>
