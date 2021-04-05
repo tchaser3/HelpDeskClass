@@ -293,8 +293,6 @@ namespace HelpDeskDLL {
             
             private global::System.Data.DataColumn columnTicketStatus;
             
-            private global::System.Data.DataColumn columnExtension;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindHelpDeskTicketsByAssignmentDataTable() {
@@ -386,14 +384,6 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExtensionColumn {
-                get {
-                    return this.columnExtension;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +419,7 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketsByAssignmentRow AddFindHelpDeskTicketsByAssignmentRow(System.DateTime TicketDate, string ReportedProblem, string FirstName, string LastName, string HomeOffice, string TicketStatus, int Extension) {
+            public FindHelpDeskTicketsByAssignmentRow AddFindHelpDeskTicketsByAssignmentRow(System.DateTime TicketDate, string ReportedProblem, string FirstName, string LastName, string HomeOffice, string TicketStatus) {
                 FindHelpDeskTicketsByAssignmentRow rowFindHelpDeskTicketsByAssignmentRow = ((FindHelpDeskTicketsByAssignmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -438,8 +428,7 @@ namespace HelpDeskDLL {
                         FirstName,
                         LastName,
                         HomeOffice,
-                        TicketStatus,
-                        Extension};
+                        TicketStatus};
                 rowFindHelpDeskTicketsByAssignmentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindHelpDeskTicketsByAssignmentRow);
                 return rowFindHelpDeskTicketsByAssignmentRow;
@@ -476,7 +465,6 @@ namespace HelpDeskDLL {
                 this.columnLastName = base.Columns["LastName"];
                 this.columnHomeOffice = base.Columns["HomeOffice"];
                 this.columnTicketStatus = base.Columns["TicketStatus"];
-                this.columnExtension = base.Columns["Extension"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -496,8 +484,6 @@ namespace HelpDeskDLL {
                 base.Columns.Add(this.columnHomeOffice);
                 this.columnTicketStatus = new global::System.Data.DataColumn("TicketStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTicketStatus);
-                this.columnExtension = new global::System.Data.DataColumn("Extension", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtension);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTicketID}, true));
                 this.columnTicketID.AutoIncrement = true;
@@ -731,35 +717,6 @@ namespace HelpDeskDLL {
                     this[this.tableFindHelpDeskTicketsByAssignment.TicketStatusColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Extension {
-                get {
-                    try {
-                        return ((int)(this[this.tableFindHelpDeskTicketsByAssignment.ExtensionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Extension\' in table \'FindHelpDeskTicketsByAssignment\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableFindHelpDeskTicketsByAssignment.ExtensionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExtensionNull() {
-                return this.IsNull(this.tableFindHelpDeskTicketsByAssignment.ExtensionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExtensionNull() {
-                this[this.tableFindHelpDeskTicketsByAssignment.ExtensionColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -928,7 +885,6 @@ namespace HelpDeskDLL.FindHelpDeskTicketsByAssignmentDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
             tableMapping.ColumnMappings.Add("TicketStatus", "TicketStatus");
-            tableMapping.ColumnMappings.Add("Extension", "Extension");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

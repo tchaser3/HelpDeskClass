@@ -31,7 +31,6 @@
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="HomeOffice" DataSetColumn="HomeOffice" />
               <Mapping SourceColumn="TicketStatus" DataSetColumn="TicketStatus" />
-              <Mapping SourceColumn="Extension" DataSetColumn="Extension" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -43,7 +42,7 @@
   <xs:element name="FindHelpDeskTicketsByAssignmentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindHelpDeskTicketsByAssignmentDataSet" msprop:Generator_UserDSName="FindHelpDeskTicketsByAssignmentDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindHelpDeskTicketsByAssignment" msprop:Generator_TableClassName="FindHelpDeskTicketsByAssignmentDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByAssignment" msprop:Generator_TablePropName="FindHelpDeskTicketsByAssignment" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByAssignmentRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByAssignmentRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByAssignmentRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByAssignmentRowDeleted" msprop:Generator_UserTableName="FindHelpDeskTicketsByAssignment" msprop:Generator_RowChangedName="FindHelpDeskTicketsByAssignmentRowChanged" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByAssignmentRowChangeEvent" msprop:Generator_RowClassName="FindHelpDeskTicketsByAssignmentRow">
+        <xs:element name="FindHelpDeskTicketsByAssignment" msprop:Generator_TableClassName="FindHelpDeskTicketsByAssignmentDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketsByAssignment" msprop:Generator_RowChangedName="FindHelpDeskTicketsByAssignmentRowChanged" msprop:Generator_TablePropName="FindHelpDeskTicketsByAssignment" msprop:Generator_RowDeletingName="FindHelpDeskTicketsByAssignmentRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketsByAssignmentRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketsByAssignmentRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketsByAssignmentRowDeleted" msprop:Generator_RowClassName="FindHelpDeskTicketsByAssignmentRow" msprop:Generator_UserTableName="FindHelpDeskTicketsByAssignment" msprop:Generator_RowEvArgName="FindHelpDeskTicketsByAssignmentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TicketID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTicketID" msprop:Generator_ColumnPropNameInRow="TicketID" msprop:Generator_ColumnPropNameInTable="TicketIDColumn" msprop:Generator_UserColumnName="TicketID" type="xs:int" />
@@ -83,7 +82,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Extension" msprop:Generator_ColumnVarNameInTable="columnExtension" msprop:Generator_ColumnPropNameInRow="Extension" msprop:Generator_ColumnPropNameInTable="ExtensionColumn" msprop:Generator_UserColumnName="Extension" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

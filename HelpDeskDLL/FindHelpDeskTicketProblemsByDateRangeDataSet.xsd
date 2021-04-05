@@ -29,6 +29,8 @@
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="TicketStatus" DataSetColumn="TicketStatus" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="AssignedTechID" DataSetColumn="AssignedTechID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,7 +42,7 @@
   <xs:element name="FindHelpDeskTicketProblemsByDateRangeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindHelpDeskTicketProblemsByDateRangeDataSet" msprop:Generator_UserDSName="FindHelpDeskTicketProblemsByDateRangeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_TableClassName="FindHelpDeskTicketProblemsByDateRangeDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketProblemsByDateRange" msprop:Generator_TablePropName="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_RowDeletingName="FindHelpDeskTicketProblemsByDateRangeRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketProblemsByDateRangeRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketProblemsByDateRangeRowDeleted" msprop:Generator_UserTableName="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_RowChangedName="FindHelpDeskTicketProblemsByDateRangeRowChanged" msprop:Generator_RowEvArgName="FindHelpDeskTicketProblemsByDateRangeRowChangeEvent" msprop:Generator_RowClassName="FindHelpDeskTicketProblemsByDateRangeRow">
+        <xs:element name="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_TableClassName="FindHelpDeskTicketProblemsByDateRangeDataTable" msprop:Generator_TableVarName="tableFindHelpDeskTicketProblemsByDateRange" msprop:Generator_RowChangedName="FindHelpDeskTicketProblemsByDateRangeRowChanged" msprop:Generator_TablePropName="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_RowDeletingName="FindHelpDeskTicketProblemsByDateRangeRowDeleting" msprop:Generator_RowChangingName="FindHelpDeskTicketProblemsByDateRangeRowChanging" msprop:Generator_RowEvHandlerName="FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler" msprop:Generator_RowDeletedName="FindHelpDeskTicketProblemsByDateRangeRowDeleted" msprop:Generator_RowClassName="FindHelpDeskTicketProblemsByDateRangeRow" msprop:Generator_UserTableName="FindHelpDeskTicketProblemsByDateRange" msprop:Generator_RowEvArgName="FindHelpDeskTicketProblemsByDateRangeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TicketID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTicketID" msprop:Generator_ColumnPropNameInRow="TicketID" msprop:Generator_ColumnPropNameInTable="TicketIDColumn" msprop:Generator_UserColumnName="TicketID" type="xs:int" />
@@ -73,6 +75,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
+              <xs:element name="AssignedTechID" msprop:Generator_ColumnVarNameInTable="columnAssignedTechID" msprop:Generator_ColumnPropNameInRow="AssignedTechID" msprop:Generator_ColumnPropNameInTable="AssignedTechIDColumn" msprop:Generator_UserColumnName="AssignedTechID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
