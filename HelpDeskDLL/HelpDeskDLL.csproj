@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindHelpDeskTicketsForUserDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindHelpDeskTicketsForUserDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -350,6 +355,17 @@
     </None>
     <None Include="FindHelpDeskTicketsForEmployeeDataSet.xss">
       <DependentUpon>FindHelpDeskTicketsForEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsForUserDataSet.xsc">
+      <DependentUpon>FindHelpDeskTicketsForUserDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindHelpDeskTicketsForUserDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindHelpDeskTicketsForUserDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindHelpDeskTicketsForUserDataSet.xss">
+      <DependentUpon>FindHelpDeskTicketsForUserDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsc">
       <DependentUpon>FindHelpDeskTicketsNotAssignedByTicketIDDataSet.xsd</DependentUpon>

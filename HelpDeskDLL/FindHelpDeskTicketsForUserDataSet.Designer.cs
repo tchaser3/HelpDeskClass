@@ -20,17 +20,17 @@ namespace HelpDeskDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindHelpDeskTicketProblemsByDateRangeDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindHelpDeskTicketsForUserDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindHelpDeskTicketProblemsByDateRangeDataSet : global::System.Data.DataSet {
+    public partial class FindHelpDeskTicketsForUserDataSet : global::System.Data.DataSet {
         
-        private FindHelpDeskTicketProblemsByDateRangeDataTable tableFindHelpDeskTicketProblemsByDateRange;
+        private FindHelpDeskTicketsByUserDataTable tableFindHelpDeskTicketsByUser;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindHelpDeskTicketProblemsByDateRangeDataSet() {
+        public FindHelpDeskTicketsForUserDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace HelpDeskDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindHelpDeskTicketProblemsByDateRangeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindHelpDeskTicketsForUserDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace HelpDeskDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindHelpDeskTicketProblemsByDateRange"] != null)) {
-                    base.Tables.Add(new FindHelpDeskTicketProblemsByDateRangeDataTable(ds.Tables["FindHelpDeskTicketProblemsByDateRange"]));
+                if ((ds.Tables["FindHelpDeskTicketsByUser"] != null)) {
+                    base.Tables.Add(new FindHelpDeskTicketsByUserDataTable(ds.Tables["FindHelpDeskTicketsByUser"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace HelpDeskDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindHelpDeskTicketProblemsByDateRangeDataTable FindHelpDeskTicketProblemsByDateRange {
+        public FindHelpDeskTicketsByUserDataTable FindHelpDeskTicketsByUser {
             get {
-                return this.tableFindHelpDeskTicketProblemsByDateRange;
+                return this.tableFindHelpDeskTicketsByUser;
             }
         }
         
@@ -127,7 +127,7 @@ namespace HelpDeskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindHelpDeskTicketProblemsByDateRangeDataSet cln = ((FindHelpDeskTicketProblemsByDateRangeDataSet)(base.Clone()));
+            FindHelpDeskTicketsForUserDataSet cln = ((FindHelpDeskTicketsForUserDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace HelpDeskDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindHelpDeskTicketProblemsByDateRange"] != null)) {
-                    base.Tables.Add(new FindHelpDeskTicketProblemsByDateRangeDataTable(ds.Tables["FindHelpDeskTicketProblemsByDateRange"]));
+                if ((ds.Tables["FindHelpDeskTicketsByUser"] != null)) {
+                    base.Tables.Add(new FindHelpDeskTicketsByUserDataTable(ds.Tables["FindHelpDeskTicketsByUser"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace HelpDeskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindHelpDeskTicketProblemsByDateRange = ((FindHelpDeskTicketProblemsByDateRangeDataTable)(base.Tables["FindHelpDeskTicketProblemsByDateRange"]));
+            this.tableFindHelpDeskTicketsByUser = ((FindHelpDeskTicketsByUserDataTable)(base.Tables["FindHelpDeskTicketsByUser"]));
             if ((initTable == true)) {
-                if ((this.tableFindHelpDeskTicketProblemsByDateRange != null)) {
-                    this.tableFindHelpDeskTicketProblemsByDateRange.InitVars();
+                if ((this.tableFindHelpDeskTicketsByUser != null)) {
+                    this.tableFindHelpDeskTicketsByUser.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace HelpDeskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindHelpDeskTicketProblemsByDateRangeDataSet";
+            this.DataSetName = "FindHelpDeskTicketsForUserDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindHelpDeskTicketProblemsByDateRangeDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindHelpDeskTicketsForUserDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindHelpDeskTicketProblemsByDateRange = new FindHelpDeskTicketProblemsByDateRangeDataTable();
-            base.Tables.Add(this.tableFindHelpDeskTicketProblemsByDateRange);
+            this.tableFindHelpDeskTicketsByUser = new FindHelpDeskTicketsByUserDataTable();
+            base.Tables.Add(this.tableFindHelpDeskTicketsByUser);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindHelpDeskTicketProblemsByDateRange() {
+        private bool ShouldSerializeFindHelpDeskTicketsByUser() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace HelpDeskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindHelpDeskTicketProblemsByDateRangeDataSet ds = new FindHelpDeskTicketProblemsByDateRangeDataSet();
+            FindHelpDeskTicketsForUserDataSet ds = new FindHelpDeskTicketsForUserDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace HelpDeskDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler(object sender, FindHelpDeskTicketProblemsByDateRangeRowChangeEvent e);
+        public delegate void FindHelpDeskTicketsByUserRowChangeEventHandler(object sender, FindHelpDeskTicketsByUserRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindHelpDeskTicketProblemsByDateRangeDataTable : global::System.Data.TypedTableBase<FindHelpDeskTicketProblemsByDateRangeRow> {
+        public partial class FindHelpDeskTicketsByUserDataTable : global::System.Data.TypedTableBase<FindHelpDeskTicketsByUserRow> {
             
             private global::System.Data.DataColumn columnTicketID;
             
@@ -285,16 +285,18 @@ namespace HelpDeskDLL {
             
             private global::System.Data.DataColumn columnReportedProblem;
             
+            private global::System.Data.DataColumn columnTicketStatus;
+            
             private global::System.Data.DataColumn columnFirstName;
             
             private global::System.Data.DataColumn columnLastName;
             
-            private global::System.Data.DataColumn columnTicketStatus;
+            private global::System.Data.DataColumn columnHomeOffice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeDataTable() {
-                this.TableName = "FindHelpDeskTicketProblemsByDateRange";
+            public FindHelpDeskTicketsByUserDataTable() {
+                this.TableName = "FindHelpDeskTicketsByUser";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +304,7 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindHelpDeskTicketProblemsByDateRangeDataTable(global::System.Data.DataTable table) {
+            internal FindHelpDeskTicketsByUserDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +321,7 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindHelpDeskTicketProblemsByDateRangeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindHelpDeskTicketsByUserDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -350,6 +352,14 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TicketStatusColumn {
+                get {
+                    return this.columnTicketStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn FirstNameColumn {
                 get {
                     return this.columnFirstName;
@@ -366,9 +376,9 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TicketStatusColumn {
+            public global::System.Data.DataColumn HomeOfficeColumn {
                 get {
-                    return this.columnTicketStatus;
+                    return this.columnHomeOffice;
                 }
             }
             
@@ -383,57 +393,58 @@ namespace HelpDeskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRow this[int index] {
+            public FindHelpDeskTicketsByUserRow this[int index] {
                 get {
-                    return ((FindHelpDeskTicketProblemsByDateRangeRow)(this.Rows[index]));
+                    return ((FindHelpDeskTicketsByUserRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler FindHelpDeskTicketProblemsByDateRangeRowChanging;
+            public event FindHelpDeskTicketsByUserRowChangeEventHandler FindHelpDeskTicketsByUserRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler FindHelpDeskTicketProblemsByDateRangeRowChanged;
+            public event FindHelpDeskTicketsByUserRowChangeEventHandler FindHelpDeskTicketsByUserRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler FindHelpDeskTicketProblemsByDateRangeRowDeleting;
+            public event FindHelpDeskTicketsByUserRowChangeEventHandler FindHelpDeskTicketsByUserRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindHelpDeskTicketProblemsByDateRangeRowChangeEventHandler FindHelpDeskTicketProblemsByDateRangeRowDeleted;
+            public event FindHelpDeskTicketsByUserRowChangeEventHandler FindHelpDeskTicketsByUserRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindHelpDeskTicketProblemsByDateRangeRow(FindHelpDeskTicketProblemsByDateRangeRow row) {
+            public void AddFindHelpDeskTicketsByUserRow(FindHelpDeskTicketsByUserRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRow AddFindHelpDeskTicketProblemsByDateRangeRow(System.DateTime TicketDate, string ReportedProblem, string FirstName, string LastName, string TicketStatus) {
-                FindHelpDeskTicketProblemsByDateRangeRow rowFindHelpDeskTicketProblemsByDateRangeRow = ((FindHelpDeskTicketProblemsByDateRangeRow)(this.NewRow()));
+            public FindHelpDeskTicketsByUserRow AddFindHelpDeskTicketsByUserRow(System.DateTime TicketDate, string ReportedProblem, string TicketStatus, string FirstName, string LastName, string HomeOffice) {
+                FindHelpDeskTicketsByUserRow rowFindHelpDeskTicketsByUserRow = ((FindHelpDeskTicketsByUserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TicketDate,
                         ReportedProblem,
+                        TicketStatus,
                         FirstName,
                         LastName,
-                        TicketStatus};
-                rowFindHelpDeskTicketProblemsByDateRangeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindHelpDeskTicketProblemsByDateRangeRow);
-                return rowFindHelpDeskTicketProblemsByDateRangeRow;
+                        HomeOffice};
+                rowFindHelpDeskTicketsByUserRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindHelpDeskTicketsByUserRow);
+                return rowFindHelpDeskTicketsByUserRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRow FindByTicketID(int TicketID) {
-                return ((FindHelpDeskTicketProblemsByDateRangeRow)(this.Rows.Find(new object[] {
+            public FindHelpDeskTicketsByUserRow FindByTicketID(int TicketID) {
+                return ((FindHelpDeskTicketsByUserRow)(this.Rows.Find(new object[] {
                             TicketID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindHelpDeskTicketProblemsByDateRangeDataTable cln = ((FindHelpDeskTicketProblemsByDateRangeDataTable)(base.Clone()));
+                FindHelpDeskTicketsByUserDataTable cln = ((FindHelpDeskTicketsByUserDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,7 +452,7 @@ namespace HelpDeskDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindHelpDeskTicketProblemsByDateRangeDataTable();
+                return new FindHelpDeskTicketsByUserDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -450,9 +461,10 @@ namespace HelpDeskDLL {
                 this.columnTicketID = base.Columns["TicketID"];
                 this.columnTicketDate = base.Columns["TicketDate"];
                 this.columnReportedProblem = base.Columns["ReportedProblem"];
+                this.columnTicketStatus = base.Columns["TicketStatus"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
-                this.columnTicketStatus = base.Columns["TicketStatus"];
+                this.columnHomeOffice = base.Columns["HomeOffice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -464,12 +476,14 @@ namespace HelpDeskDLL {
                 base.Columns.Add(this.columnTicketDate);
                 this.columnReportedProblem = new global::System.Data.DataColumn("ReportedProblem", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReportedProblem);
+                this.columnTicketStatus = new global::System.Data.DataColumn("TicketStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTicketStatus);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
-                this.columnTicketStatus = new global::System.Data.DataColumn("TicketStatus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTicketStatus);
+                this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHomeOffice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTicketID}, true));
                 this.columnTicketID.AutoIncrement = true;
@@ -479,38 +493,40 @@ namespace HelpDeskDLL {
                 this.columnTicketDate.AllowDBNull = false;
                 this.columnReportedProblem.AllowDBNull = false;
                 this.columnReportedProblem.MaxLength = 2147483647;
+                this.columnTicketStatus.AllowDBNull = false;
+                this.columnTicketStatus.MaxLength = 2147483647;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
-                this.columnTicketStatus.AllowDBNull = false;
-                this.columnTicketStatus.MaxLength = 2147483647;
+                this.columnHomeOffice.AllowDBNull = false;
+                this.columnHomeOffice.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRow NewFindHelpDeskTicketProblemsByDateRangeRow() {
-                return ((FindHelpDeskTicketProblemsByDateRangeRow)(this.NewRow()));
+            public FindHelpDeskTicketsByUserRow NewFindHelpDeskTicketsByUserRow() {
+                return ((FindHelpDeskTicketsByUserRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindHelpDeskTicketProblemsByDateRangeRow(builder);
+                return new FindHelpDeskTicketsByUserRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindHelpDeskTicketProblemsByDateRangeRow);
+                return typeof(FindHelpDeskTicketsByUserRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindHelpDeskTicketProblemsByDateRangeRowChanged != null)) {
-                    this.FindHelpDeskTicketProblemsByDateRangeRowChanged(this, new FindHelpDeskTicketProblemsByDateRangeRowChangeEvent(((FindHelpDeskTicketProblemsByDateRangeRow)(e.Row)), e.Action));
+                if ((this.FindHelpDeskTicketsByUserRowChanged != null)) {
+                    this.FindHelpDeskTicketsByUserRowChanged(this, new FindHelpDeskTicketsByUserRowChangeEvent(((FindHelpDeskTicketsByUserRow)(e.Row)), e.Action));
                 }
             }
             
@@ -518,8 +534,8 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindHelpDeskTicketProblemsByDateRangeRowChanging != null)) {
-                    this.FindHelpDeskTicketProblemsByDateRangeRowChanging(this, new FindHelpDeskTicketProblemsByDateRangeRowChangeEvent(((FindHelpDeskTicketProblemsByDateRangeRow)(e.Row)), e.Action));
+                if ((this.FindHelpDeskTicketsByUserRowChanging != null)) {
+                    this.FindHelpDeskTicketsByUserRowChanging(this, new FindHelpDeskTicketsByUserRowChangeEvent(((FindHelpDeskTicketsByUserRow)(e.Row)), e.Action));
                 }
             }
             
@@ -527,8 +543,8 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindHelpDeskTicketProblemsByDateRangeRowDeleted != null)) {
-                    this.FindHelpDeskTicketProblemsByDateRangeRowDeleted(this, new FindHelpDeskTicketProblemsByDateRangeRowChangeEvent(((FindHelpDeskTicketProblemsByDateRangeRow)(e.Row)), e.Action));
+                if ((this.FindHelpDeskTicketsByUserRowDeleted != null)) {
+                    this.FindHelpDeskTicketsByUserRowDeleted(this, new FindHelpDeskTicketsByUserRowChangeEvent(((FindHelpDeskTicketsByUserRow)(e.Row)), e.Action));
                 }
             }
             
@@ -536,14 +552,14 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindHelpDeskTicketProblemsByDateRangeRowDeleting != null)) {
-                    this.FindHelpDeskTicketProblemsByDateRangeRowDeleting(this, new FindHelpDeskTicketProblemsByDateRangeRowChangeEvent(((FindHelpDeskTicketProblemsByDateRangeRow)(e.Row)), e.Action));
+                if ((this.FindHelpDeskTicketsByUserRowDeleting != null)) {
+                    this.FindHelpDeskTicketsByUserRowDeleting(this, new FindHelpDeskTicketsByUserRowChangeEvent(((FindHelpDeskTicketsByUserRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindHelpDeskTicketProblemsByDateRangeRow(FindHelpDeskTicketProblemsByDateRangeRow row) {
+            public void RemoveFindHelpDeskTicketsByUserRow(FindHelpDeskTicketsByUserRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -552,7 +568,7 @@ namespace HelpDeskDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindHelpDeskTicketProblemsByDateRangeDataSet ds = new FindHelpDeskTicketProblemsByDateRangeDataSet();
+                FindHelpDeskTicketsForUserDataSet ds = new FindHelpDeskTicketsForUserDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -570,7 +586,7 @@ namespace HelpDeskDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindHelpDeskTicketProblemsByDateRangeDataTable";
+                attribute2.FixedValue = "FindHelpDeskTicketsByUserDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -614,25 +630,25 @@ namespace HelpDeskDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindHelpDeskTicketProblemsByDateRangeRow : global::System.Data.DataRow {
+        public partial class FindHelpDeskTicketsByUserRow : global::System.Data.DataRow {
             
-            private FindHelpDeskTicketProblemsByDateRangeDataTable tableFindHelpDeskTicketProblemsByDateRange;
+            private FindHelpDeskTicketsByUserDataTable tableFindHelpDeskTicketsByUser;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindHelpDeskTicketProblemsByDateRangeRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindHelpDeskTicketsByUserRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindHelpDeskTicketProblemsByDateRange = ((FindHelpDeskTicketProblemsByDateRangeDataTable)(this.Table));
+                this.tableFindHelpDeskTicketsByUser = ((FindHelpDeskTicketsByUserDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int TicketID {
                 get {
-                    return ((int)(this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketIDColumn]));
+                    return ((int)(this[this.tableFindHelpDeskTicketsByUser.TicketIDColumn]));
                 }
                 set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketIDColumn] = value;
+                    this[this.tableFindHelpDeskTicketsByUser.TicketIDColumn] = value;
                 }
             }
             
@@ -640,10 +656,10 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime TicketDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketDateColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindHelpDeskTicketsByUser.TicketDateColumn]));
                 }
                 set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketDateColumn] = value;
+                    this[this.tableFindHelpDeskTicketsByUser.TicketDateColumn] = value;
                 }
             }
             
@@ -651,32 +667,10 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ReportedProblem {
                 get {
-                    return ((string)(this[this.tableFindHelpDeskTicketProblemsByDateRange.ReportedProblemColumn]));
+                    return ((string)(this[this.tableFindHelpDeskTicketsByUser.ReportedProblemColumn]));
                 }
                 set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.ReportedProblemColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FirstName {
-                get {
-                    return ((string)(this[this.tableFindHelpDeskTicketProblemsByDateRange.FirstNameColumn]));
-                }
-                set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.FirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LastName {
-                get {
-                    return ((string)(this[this.tableFindHelpDeskTicketProblemsByDateRange.LastNameColumn]));
-                }
-                set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.LastNameColumn] = value;
+                    this[this.tableFindHelpDeskTicketsByUser.ReportedProblemColumn] = value;
                 }
             }
             
@@ -684,10 +678,43 @@ namespace HelpDeskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string TicketStatus {
                 get {
-                    return ((string)(this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketStatusColumn]));
+                    return ((string)(this[this.tableFindHelpDeskTicketsByUser.TicketStatusColumn]));
                 }
                 set {
-                    this[this.tableFindHelpDeskTicketProblemsByDateRange.TicketStatusColumn] = value;
+                    this[this.tableFindHelpDeskTicketsByUser.TicketStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    return ((string)(this[this.tableFindHelpDeskTicketsByUser.FirstNameColumn]));
+                }
+                set {
+                    this[this.tableFindHelpDeskTicketsByUser.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    return ((string)(this[this.tableFindHelpDeskTicketsByUser.LastNameColumn]));
+                }
+                set {
+                    this[this.tableFindHelpDeskTicketsByUser.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HomeOffice {
+                get {
+                    return ((string)(this[this.tableFindHelpDeskTicketsByUser.HomeOfficeColumn]));
+                }
+                set {
+                    this[this.tableFindHelpDeskTicketsByUser.HomeOfficeColumn] = value;
                 }
             }
         }
@@ -696,22 +723,22 @@ namespace HelpDeskDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindHelpDeskTicketProblemsByDateRangeRowChangeEvent : global::System.EventArgs {
+        public class FindHelpDeskTicketsByUserRowChangeEvent : global::System.EventArgs {
             
-            private FindHelpDeskTicketProblemsByDateRangeRow eventRow;
+            private FindHelpDeskTicketsByUserRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRowChangeEvent(FindHelpDeskTicketProblemsByDateRangeRow row, global::System.Data.DataRowAction action) {
+            public FindHelpDeskTicketsByUserRowChangeEvent(FindHelpDeskTicketsByUserRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindHelpDeskTicketProblemsByDateRangeRow Row {
+            public FindHelpDeskTicketsByUserRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -727,7 +754,7 @@ namespace HelpDeskDLL {
         }
     }
 }
-namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters {
+namespace HelpDeskDLL.FindHelpDeskTicketsForUserDataSetTableAdapters {
     
     
     /// <summary>
@@ -739,7 +766,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindHelpDeskTicketProblemsByDateRangeTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindHelpDeskTicketsByUserTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -753,7 +780,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindHelpDeskTicketProblemsByDateRangeTableAdapter() {
+        public FindHelpDeskTicketsByUserTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -850,13 +877,14 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindHelpDeskTicketProblemsByDateRange";
+            tableMapping.DataSetTable = "FindHelpDeskTicketsByUser";
             tableMapping.ColumnMappings.Add("TicketID", "TicketID");
             tableMapping.ColumnMappings.Add("TicketDate", "TicketDate");
             tableMapping.ColumnMappings.Add("ReportedProblem", "ReportedProblem");
+            tableMapping.ColumnMappings.Add("TicketStatus", "TicketStatus");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("TicketStatus", "TicketStatus");
+            tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -873,9 +901,10 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindHelpDeskTicketProblemsByDateRange";
+            this._commandCollection[0].CommandText = "dbo.FindHelpDeskTicketsByUser";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -884,19 +913,25 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindHelpDeskTicketProblemsByDateRangeDataSet.FindHelpDeskTicketProblemsByDateRangeDataTable dataTable, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate) {
+        public virtual int Fill(FindHelpDeskTicketsForUserDataSet.FindHelpDeskTicketsByUserDataTable dataTable, global::System.Nullable<int> EmployeeID, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((StartDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(StartDate.Value));
+            if ((EmployeeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(EmployeeID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((EndDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(EndDate.Value));
+            if ((StartDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(StartDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((EndDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(EndDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -909,21 +944,27 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindHelpDeskTicketProblemsByDateRangeDataSet.FindHelpDeskTicketProblemsByDateRangeDataTable GetData(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate) {
+        public virtual FindHelpDeskTicketsForUserDataSet.FindHelpDeskTicketsByUserDataTable GetData(global::System.Nullable<int> EmployeeID, global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((StartDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(StartDate.Value));
+            if ((EmployeeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(EmployeeID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((EndDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(EndDate.Value));
+            if ((StartDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(StartDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            FindHelpDeskTicketProblemsByDateRangeDataSet.FindHelpDeskTicketProblemsByDateRangeDataTable dataTable = new FindHelpDeskTicketProblemsByDateRangeDataSet.FindHelpDeskTicketProblemsByDateRangeDataTable();
+            if ((EndDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(EndDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            FindHelpDeskTicketsForUserDataSet.FindHelpDeskTicketsByUserDataTable dataTable = new FindHelpDeskTicketsForUserDataSet.FindHelpDeskTicketsByUserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -997,7 +1038,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindHelpDeskTicketProblemsByDateRangeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindHelpDeskTicketsForUserDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1007,7 +1048,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindHelpDeskTicketProblemsByDateRangeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindHelpDeskTicketsForUserDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1017,7 +1058,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindHelpDeskTicketProblemsByDateRangeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindHelpDeskTicketsForUserDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1051,7 +1092,7 @@ namespace HelpDeskDLL.FindHelpDeskTicketProblemsByDateRangeDataSetTableAdapters 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindHelpDeskTicketProblemsByDateRangeDataSet dataSet) {
+        public virtual int UpdateAll(FindHelpDeskTicketsForUserDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

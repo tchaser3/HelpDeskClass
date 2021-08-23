@@ -114,7 +114,24 @@ namespace HelpDeskDLL
         FindHelpDeskTicketsByAssignmentDataSet aFindHelpDeskTicketsByAssignmentDataSet;
         FindHelpDeskTicketsByAssignmentDataSetTableAdapters.FindHelpDeskTicketsByAssignmentTableAdapter aFindHelpDeskTicketsByAssignmentTableAdapter;
 
+        FindHelpDeskTicketsForUserDataSet aFindHelpDeskTicketsForUserDataSet;
+        FindHelpDeskTicketsForUserDataSetTableAdapters.FindHelpDeskTicketsByUserTableAdapter aFindHelpDeskTicketsForUserTableAdapter;
 
+        public FindHelpDeskTicketsForUserDataSet FindHelpDeskTicketsForUser(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindHelpDeskTicketsForUserDataSet = new FindHelpDeskTicketsForUserDataSet();
+                aFindHelpDeskTicketsForUserTableAdapter = new FindHelpDeskTicketsForUserDataSetTableAdapters.FindHelpDeskTicketsByUserTableAdapter();
+                aFindHelpDeskTicketsForUserTableAdapter.Fill(aFindHelpDeskTicketsForUserDataSet.FindHelpDeskTicketsByUser, intEmployeeID, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets For User " + Ex.Message);
+            }
+
+            return aFindHelpDeskTicketsForUserDataSet;
+        }
         public FindHelpDeskTicketsByAssignmentDataSet FindHelpDeskTicketsbyAssignment(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try
