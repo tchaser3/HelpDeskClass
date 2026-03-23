@@ -117,8 +117,23 @@ namespace HelpDeskDLL
         FindHelpDeskTicketsForUserDataSet aFindHelpDeskTicketsForUserDataSet;
         FindHelpDeskTicketsForUserDataSetTableAdapters.FindHelpDeskTicketsByUserTableAdapter aFindHelpDeskTicketsForUserTableAdapter;
 
+        FindHelpDeskTicketInformationByTicketIDDataSet FindHelpDeskTicketInformationByTicketIDDataSet;
+        FindHelpDeskTicketInformationByTicketIDDataSetTableAdapters.FindHelpDeskTicketInformationByTickeIDTableAdapter aFindHelpDeskTicketInformationByTicketIDTableAdapter;   
 
-
+        public FindHelpDeskTicketInformationByTicketIDDataSet FindHelpDeskTicketInformationByTicketID(int intTicketID)
+        {
+            try
+            {
+                FindHelpDeskTicketInformationByTicketIDDataSet = new FindHelpDeskTicketInformationByTicketIDDataSet();
+                aFindHelpDeskTicketInformationByTicketIDTableAdapter = new FindHelpDeskTicketInformationByTicketIDDataSetTableAdapters.FindHelpDeskTicketInformationByTickeIDTableAdapter();
+                aFindHelpDeskTicketInformationByTicketIDTableAdapter.Fill(FindHelpDeskTicketInformationByTicketIDDataSet.FindHelpDeskTicketInformationByTickeID, intTicketID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Information By Ticket ID " + Ex.Message);
+            }
+            return FindHelpDeskTicketInformationByTicketIDDataSet;
+        }
         public FindHelpDeskTicketsForUserDataSet FindHelpDeskTicketsForUser(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try
