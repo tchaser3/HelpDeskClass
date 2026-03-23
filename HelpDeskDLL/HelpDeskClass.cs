@@ -117,6 +117,8 @@ namespace HelpDeskDLL
         FindHelpDeskTicketsForUserDataSet aFindHelpDeskTicketsForUserDataSet;
         FindHelpDeskTicketsForUserDataSetTableAdapters.FindHelpDeskTicketsByUserTableAdapter aFindHelpDeskTicketsForUserTableAdapter;
 
+
+
         public FindHelpDeskTicketsForUserDataSet FindHelpDeskTicketsForUser(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try
