@@ -130,7 +130,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Information By Ticket ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Information By Ticket ID " + Ex.ToString());
             }
             return FindHelpDeskTicketInformationByTicketIDDataSet;
         }
@@ -144,7 +144,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets For User " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets For User " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsForUserDataSet;
@@ -159,7 +159,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Assignment " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsByAssignmentDataSet;
@@ -174,7 +174,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Assignment " + Ex.ToString());
             }
 
             return aFindOpenHelpDeskTicketsForAssignmentDataSet;
@@ -189,7 +189,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Problems By Date Range " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Problems By Date Range " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketProblemsByDateRangeDataSet;
@@ -204,7 +204,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // find Help Desk Tickets For Employee " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // find Help Desk Tickets For Employee " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsForEmployeeDataSet;
@@ -219,7 +219,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Employee " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets For Employee " + Ex.ToString());
             }
 
             return aFindOpenHelpDeskTicketsForEmployeeDataSet;
@@ -234,7 +234,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Assigned Help Desk Tickets For Employee " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Assigned Help Desk Tickets For Employee " + Ex.ToString());
             }
 
             return aFindAssignedHelpDeskTicketsForEmployeeDataSet;
@@ -249,7 +249,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets Assigned " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets Assigned " + Ex.ToString());
             }
 
             return aFindOpenHelpDeskTicketsAssignedDataSet;
@@ -265,7 +265,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Problem Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Problem Type " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -282,7 +282,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets Not Assigned By Ticket ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets Not Assigned By Ticket ID " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsNotAssignedByTicketIDDataSet;
@@ -297,7 +297,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Open Help Desk Tickets " + Ex.ToString());
             }
 
             return aFindOpenHelpDeskTicketsDataSet;
@@ -312,7 +312,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Updates " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Updates " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketUpdatesByDateRangeDataSet;
@@ -327,7 +327,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Assignments " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Assignments " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketAssignmentsDataSet;
@@ -342,7 +342,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Current Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Current Assignment " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketCurrentAssignmentDataSet;
@@ -358,7 +358,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Current Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Current Assignment " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -376,7 +376,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Assignment " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -393,7 +393,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Assignment Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Assignment Info " + Ex.ToString());
             }
 
             return aHelpDeskTicketAssignmentDataSet;
@@ -407,7 +407,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Assignment DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Assignment DB " + Ex.ToString());
             }
         }
         public FindHelpDeskProblemTypeByProblemTypeDataSet FindHelpDeskProblemTypeByProblemType(string strProblemType)
@@ -420,7 +420,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Problem Type By Problem Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Problem Type By Problem Type " + Ex.ToString());
             }
 
             return aFindHelpDeskProblemTypeByProblemTypeDataSet;
@@ -435,7 +435,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Problem Type By Problem Type ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Problem Type By Problem Type ID " + Ex.ToString());
             }
 
             return aFindHelpDeskProblemtypeByProblemTypeIDDataSet;
@@ -450,7 +450,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Sorted Help Desk Problem Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Sorted Help Desk Problem Type " + Ex.ToString());
             }
 
             return aFindSortedHelpDeskProblemTypeDataSet;
@@ -466,7 +466,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Problem Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Problem Type " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -483,7 +483,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Problem Type Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Problem Type Info " + Ex.ToString());
             }
 
             return aHelpDeskProblemTypeDataSet;
@@ -497,7 +497,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Problem Type DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Problem Type DB " + Ex.ToString());
             }
         }
         public FindHelpDeskTicketUpdatesByTicketIDDataSet FindHelpDeskTicketUpdatesByTicketID(int intTicketID)
@@ -508,9 +508,9 @@ namespace HelpDeskDLL
                 aFindHelpDeskTicketUpdatesByTicketIDTableAdapter = new FindHelpDeskTicketUpdatesByTicketIDDataSetTableAdapters.FindHelpDeskTicketUpdatesByTicketIDTableAdapter();
                 aFindHelpDeskTicketUpdatesByTicketIDTableAdapter.Fill(aFindHelpDeskTicketUpdatesByTicketIDDataSet.FindHelpDeskTicketUpdatesByTicketID, intTicketID);
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Updates By Ticket ID " + ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Updates By Ticket ID " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketUpdatesByTicketIDDataSet;
@@ -526,7 +526,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Update " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Update " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -543,7 +543,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Update Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Update Info " + Ex.ToString());
             }
 
             return aHelpDeskTicketUpdateDataSet;
@@ -557,7 +557,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Update DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Update DB " + Ex.ToString());
             }
         }
         public FindHelpDeskTicketDocumentationByTicketIDDataSet FindHelpDeskTicketDocumentationByTicketID(int intTicketID)
@@ -570,7 +570,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Documentation By Ticket ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket Documentation By Ticket ID " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketDocumentationByTicketIDDataSet;
@@ -586,7 +586,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Documentation " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket Documentation " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -603,7 +603,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Documentation Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Ticket Documentation Info " + Ex.ToString());
             }
 
             return aHelpDeskTicketDocumentationDataSet;
@@ -617,7 +617,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Documentation DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Documentation DB " + Ex.ToString());
             }
         }
         public FindHelpDeskTicketsByTicketIDDataSet FindHelpDeskTicketByTicketID(int intTicketID)
@@ -630,7 +630,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Ticket ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Ticket ID " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsByTicketIDDateSet;
@@ -645,7 +645,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Date Range " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Tickets By Date Range " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketsByDateRangeDataSet;
@@ -660,7 +660,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket By Ticket Date Match " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Find Help Desk Ticket By Ticket Date Match " + Ex.ToString());
             }
 
             return aFindHelpDeskTicketByTicketDateMatchDataSet;
@@ -676,7 +676,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Status " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Update Help Desk Ticket Status " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -694,7 +694,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Insert Help Desk Ticket " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -711,7 +711,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Tickets Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Tickets Info " + Ex.ToString());
             }
 
             return aHelpDeskTicketsDataSet;
@@ -725,7 +725,7 @@ namespace HelpDeskDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Tickets Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Help Desk Class // Get Help Desk Tickets Info " + Ex.ToString());
             }
         }
     }
